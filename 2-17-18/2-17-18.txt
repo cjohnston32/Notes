@@ -165,3 +165,10 @@ CSS Notes
 		For building the whole page layout and bigger detials
 		Works well in two dimensions
 			
+HTML Notes
+	Viewport
+		<meta name="viewport" content="width=device-width, initial-scale=1>
+		Then include media queries to adjust CSS based on screen width if needed
+			@media screen and (max-width: SCREENSIZEpx) {
+			different styles for screensize
+			}
