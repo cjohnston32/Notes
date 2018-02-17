@@ -1,0 +1,40 @@
+Typography
+	Line height
+		Distance between lines of text
+		Golden ratio: 1.5x font size
+		line-height:
+	Font-size
+		At least 16px 
+		font-size:
+	Line-length
+		50-75 chars per line
+		max-width:
+	Letter-spacing
+		letter-spacing:
+	Sans-serif is easiest to read
+
+Pseudo Classes
+	Keywords you can add to selectors
+	Allows you to make chagnes when a certain thing happens (special states)
+	EXAMPLES:
+		:before
+		:after
+		:hover (when hovering over element)
+		:active (when element is being used (with a mouse it is after the user clicks on the element but ends when they let go of the mouse buttun)
+		:focus (selected element, like when selected with tab)
+
+
+Bootstrap
+	CDN
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	Uses pre-defined CSS styles
+	UI Kit, like using a template
+	Mobile responsive
+	Jumbotron
+		Eye-catching, landing part of page.  Good for a small amount of important information.
+	Glyphicons
+		Glyphs
+		Used for buttons/icons
+	Tables
+	Form
+	Navbar

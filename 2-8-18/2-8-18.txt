@@ -1,0 +1,49 @@
+GITHUB NOTES
+When making a repository
+	Use SSH to have files accessible only by keys
+	HTTPS attaches files to Github account
+Never put a repo inside another repo when cloning
+
+Useful terminal commands
+	>alias aliasName="programName.exe"
+		Allows you to use aliasName to call a program instead of the programName
+		Ex: alias open="explorer.exe"
+
+Process for adding new files
+	Add - Commit - Push
+		>git add FILENAME
+		>git commit
+			In first line, write a less than 50 char title describing what is being commmitted
+			Subsequent lines may be used for more detailed information
+			To leave/save:
+				1) Press esc to get into command mode
+				2) Enter :wq
+			Good to commit after a point where the code is working
+		>git push
+	Other useful git commands
+		>git status
+			Returns status of files in repository
+		>git log
+			Lists changes to repository
+
+Key CSS Attributes
+	color
+	font-size
+	font-style
+	font-weight
+	padding (top,right,bottom,left)
+	margin (top,right,bottom,left)
+	float
+	background-color
+	background-image
+
+How to incorporate CSS
+	External CSS file added to HTML file in header
+	<style> element in header
+	Inline CSS as style attributes for HTML5 elements (don't do this now, week 15->)
+
+Other CSS Notes
+	Padding: Space between content and its border
+	Margin: Space between the content's border and other content
+
+		

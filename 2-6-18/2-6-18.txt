@@ -1,0 +1,47 @@
+Class start @ 545?
+Office hours:
+	45 min before
+	30 min after
+Support:
+	Github
+	GitLab
+	1-on-1 checkup
+	SURVEYS - REMEMBER TO DO
+
+Career Services AMA Feb 14 7-8pm
+
+Put picture on Slack
+
+FIX GITLAB
+	Attach key to Gitlab
+
+Homework is on Gitlab
+-----------------------------------
+Terminal
+	General
+	Commands
+		pwd
+			Prints present working directory
+		ls
+			Prints list of files/folders in directory
+		rm X
+			Removes file X
+		rm X/*
+			Removes all files in folder X
+		man X
+			Gives manual/info on command X
+			--Check out man rm--
+			!!rm doesn't work, try help!!
+		mkdir X
+			Create directory X
+		touch X.ext
+			Create file X.ext
+		open X
+			Opens file X
+		explorer X
+			Or explorer .X - Figure out difference
+			Opens file X
+		cd X
+			Change directory to descending directory X
+			cd /.. to go up a directory
+			cd ~ to return to home directory

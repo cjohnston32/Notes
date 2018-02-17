@@ -1,0 +1,19 @@
+CSS Notes
+	If using multiple stylesheets the last one has highest priority
+	RH: 116479916341
+	CSS Resets:
+		Used to insure cross-platform compatibility between browsers
+
+HTML Notes
+	FOR HW: Put side-by-side elements in same parent element div
+		Think of containers on your page - rectangular shapes
+	Containers:
+		The <div> element is the most basic container with the most general use
+		<section> <nav> <header> <footer> etc
+		<article>:
+			Defines a self-contained article
+	<span>:
+		Used for storing multiple inline elements
+		EX:
+			<p>Some words<span color="blue>BLUE WORDS</span>other words.</p>
+

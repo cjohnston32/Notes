@@ -1,0 +1,167 @@
+Semantic Versioning!
+	Look up!!!
+
+Bootstrap
+	Mobile-first!
+		<meat name="viewport" content="width=device-width, initial-scale=1">
+			Put inside header
+			"width=device-width"
+				Sets page width to follow screen width of device
+			"initial-scale=1"
+				Sets initial zoom level
+	
+	Containers
+		Two container classes to wrap contents in
+		.container
+			Provides a responsive fixed width container
+		.container-fluid
+			Provides a full width container
+
+	Grid
+		BS allows for up to 12 columns across a page
+			Can also do a 16 grid system 
+			Stick with one system for your website
+		Grid system has 4 classes
+			xs
+				For phone screens, less than 768px wide
+			sm
+				For tablets, equal or grater than 768px wide
+			md
+				For small laptops, width greater to or equal to 992px
+			lg
+				For desktops, width greater to or equal to 1200px
+			Example:
+				Three equal columns
+				<div class="row">
+					<div class="col-sm-4">Tablet column, width of 4/12</div>
+					<div class="col-sm-4">Tablet column, width of 4/12</div>
+					<div class="col-sm-4">Tablet column, width of 4/12</div>
+				</div>
+		Wireframes
+			Above or below the fold
+				Terminology meaning what is at the top of your page
+		Every grid is made up of
+			Containers
+			Rows
+				Defined firsts
+			Columns
+				Defined within rows, must add up to 12
+		BS Grid vs CSS Flex
+			CSS Flex is more powerful, learn to use Flex instead!
+			Usually if using both, use Flex inside of BS
+
+	Jumbotron
+		Indicates a big box for calling extra attention to a small, special amount of information
+		Put inside a container if you don't want full width
+		<div class="container">
+			<div class="jumbotron">
+				CONTENT
+			</div>
+		</div>
+
+CSS Notes
+	Borders
+		Shorthand form:   -- border:
+			width style color
+	Flex
+		For aligning the content inside elements and other small detials
+		Works better in one dimension (row or column)
+		A single direction (1 dimension) layout concept
+		Flex Containers
+			.container {
+				display: flex;
+			}
+			flex-drection:
+				Establishes the main-axis or the direction flex items are placed inside the flex container
+				Affected by text direction of container
+				row;
+					Default value, left to right if direction: ltr;
+				row-reverse;
+				column;
+					Top to bottom
+				column-reverse;
+			flex-wrap:
+				By default, flex items try to fit into one line
+				nowrap;
+					Default, all items on one item
+				wrap;
+					Wrap onto multiple lines, from top to bottom
+				wrap-reverse;
+			flex-flow: <'flex-direction'> || <'flex-wrap'>;
+				Shorthand for above two properties
+			justify-content:
+				Defines alignment along the main axis, helping to distribute extra space
+				Also exerts some control over alignment of items if they overflow line
+				flex-start;
+					Default, items packed towards the start of line
+				flex-end;
+				center;
+				space-between;
+					Items are evenly distributed in the line
+					First element at start, last element touching end of line
+				space-around;
+					Items are evenly distribued with equal space around them
+					This means there will be one unit of space between the first item and the start of the line as well as the last item and the end of the line
+					Two units of space between items since each item has its own spacing (1+1=2)
+				space-evenly;
+					Spacing between any two items and the space to the edges is equal 	
+			align-items:
+				Defines how flex items are laid out along the cross axis on the current line
+				Perpindicular to the main axis
+				flex-start;
+					Cross-start margin edge of items are placed on the cross-start line
+						With default left-to-right values, this would put the top of the items touching the top of the container
+				flex-end;
+				center;
+				baseline;
+					Items aligned so their baselines align
+				stretch;
+					Defaul value, items stretch to fill container
+			align-content:
+				Aligns a flex container's lines within when there is extra space in the CROSS axis
+				Like how justify-content aligns individual alignment within the MAIN axis
+				Has no effect if there is only one line of flex items
+				flex-start;
+					Lines packed to the container start
+				flex-end;
+				center;
+				space-between;
+					Lines evenly distributed, with first line at the start and last line at the end of the container
+				space-around;
+					Same as space-between but with equal space between each line
+				stretch;
+					Default, lines stretch to take up remaining space
+
+
+				
+				
+		Flex Items
+			order: <integer>;
+				Changes the order in which sn item is laid out in a flex container, lower numbers come first
+			flex-grow: <integer>;
+				Defines the ability for a flax item to grow and take up more space if necessary
+				All items have a default value of 0
+				If one item has a value of 2 and all others have a value of 1, it will take up twice as much space as the other items
+			flex-shrink: <number>;
+				Defines ability for a flex item to shrink
+				Default is 1
+			flex-basis: <length> | <keyword>;
+				Defines default size of an element before remaining space is distributed
+				<length> can be a %, px, rem, etc.
+					If set to 0, extra space around content isn't factored in
+				<keyword>
+					auto;
+						Means look at my width/height property
+					content;
+						Size it based on the item's content
+						Not well supported yet
+			flex: none | <'flex-grow'> <'flex-shrink'> <'flex-basis'>
+				Recommended shorthand
+				Second and thrid (shrink & basis) paramters optional
+				Default is 0 1 auto
+			align-self:
+				Allows for the alignment specified by align-items (container property) to be overridden for individual items
+	Grid
+		For building the whole page layout and bigger detials
+		Works well in two dimensions
+			

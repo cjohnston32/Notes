@@ -1,0 +1,22 @@
+html {
+    text-align: center;
+}
+
+.col-md-12{
+    border: 2px solid black;
+    padding: 40px;
+    background-color: #777;
+    margin: 20px auto;
+}
+
+.row {
+    height: 144px;
+}
+
+
+
+.col-md-3 {
+    border: 2px solid black;
+    padding: 40px;
+    background-color: #777;
+}
