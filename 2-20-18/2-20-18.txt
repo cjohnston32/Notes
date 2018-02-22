@@ -1,0 +1,228 @@
+CSS Grid
+	Intended for complex 2D layouts
+	TERMINOLOGY
+		Grid line
+			The dividing lines that make up the structure of the grid
+			Horizontal or vertical (row or column lines)
+		Grid track
+			The space between two adjacent grid lines
+			Columns or rows
+		Grid cell
+			A single unit (1 column and 1 row) of the grid
+		
+	Grid Containers!
+		To make a grid container
+			.container {
+				display: grid|inline-grid|subgrid
+			}
+			grid
+				Generates a block level grid
+			inline-grid
+				Generates an inline-level grid
+			subgrid
+				When making a grid container inside another grid container
+				Indicates that row/column sizes should be taken from its parent
+
+		grid-template-(columns/rows): <track-size> || [<line-name>] <track-size>;
+			Defines the space between the grid lines
+				So the first value refers to the width of the first column of the grid 
+			Still have to define the items inside the grid to see any grid
+				<div class="container">
+					<div class="item1">1</div>
+					<div class="item2">2</div>
+					etc
+				</div>
+			Normally starts at top left of grid
+			Create multiple grid lines by seperating values with spaces
+			track-size
+				Defines the space between a row/column and the following row/column
+				can be a %, fraction (fr) or a length
+			line-name
+				Optional, allows you to name each grid line if desired
+				If not used, each line is named by number, in order of creation
+				Can have multiple names for each line, just seperate by a space
+			If your definition has repeating identical segments, you can use repeat() to streamline
+				EXAMPLE: .container {
+						grid-template-columns: repeat(3, 20px [col-start])
+					}
+						Creates 3 vertical grid lines of 20px width
+			fr unit
+				Allows for setting the size of a track as a fraction of the free space of the container
+				EXAMPLE: 
+					.container {
+						grid-template-columns: 1fr 1fr 1fr;
+					}
+					Sets each item to take uo a third of the container width
+				Always set AFTER any non-flexible items (remaining space after any px, % values)
+
+		grid-template-areas: "<grid-area-name>" | "." | "none"
+				     ...
+			Defines a grid template by referencing names of grid areas specified with the grid-area property on grid items	
+			Repeating the name of a grid area causes the content to span the cells referred to by the name
+			. signifies an empty cell
+			none indicates no grid areas are defined
+			Organize this styling into one row for each line
+			EXAMPLE: If you had a grid with 2 rows and 3 columns and wnated the top row to be a header area and the bottom a footer area
+				.container {
+					grid-template-(columns/rows): STUFF;
+					grid-template-areas: "header header header"
+						     	     "footer footer footer";
+				}
+					2 lines, 2 rows
+			Automatically assigns grid line names
+				EXAMPLE: If your grid area is called foo
+					 The starting row/column line will be foo-start
+					 Ending grid lines will be foo-end
+					 Be aware grid lines will often have multiple names!
+		
+		grid-template: none | subgrid | <grid-template-rows> / <grid-template-columns>
+			Straitforward shorthand for grid-template-(rows/columns) and grid-template-areas
+			none
+				Sets all three properties to initial value
+			subgrid
+				Sets grid-template-(rows/columns) to subgrid
+				Sets grid-template-areas to intial value
+			grid-template-rows / grid-template-columns
+				Specifies values for these two properties
+				Sets grid-template-areas to none
+			Also accepts a more complex syntax for specifying area too!
+				EXAMPLE:
+				.container {
+				  grid-template:
+				    [row1-start] "header header header" 25px [row1-end]
+				    [row2-start] "footer footer footer" 25px [row2-end]
+				    / auto 50px auto;
+				}
+						IS EQUIVALENT TO
+				.container {
+  				  grid-template-rows: [row1-start] 25px [row1-end row2-start] 25px [row2-end];
+  				  grid-template-columns: auto 50px auto;
+  				  grid-template-areas: 
+    				    "header header header" 
+    				    "footer footer footer";
+				}
+			HOWEVER!
+				grid-template does not reset the implicit grid properties (grid-auto-(columns/rows/flow))
+				You probably want to do this most of the time, so usse grid: instead
+
+		grid-(column/row)-gap: <line-size>;
+			Specifies size of grid lines
+			Think of it as seting the width of the gutters between columns/rows
+		grid-gap: <grid-row-gap> <grid-column-gap>
+			Shorthand for above, use it!
+
+		justify-items: start | end | center | stretch(default)
+			Aligns content inside all grid items along the row axis
+			start
+				Pushes all grid item content to left border of item
+		align-items:
+			Same as above but for the column axis
+		
+		justify-content:
+			
+	
+
+	Grid Items!
+		grid-(row/column)-(start/end): <number> | <name> | span <number> | span <name> | auto
+			Determines a grid item's location within the grid
+			grid-(row/column)-start is where the item begins
+			4 possible values
+				A number to indicate which specifically row/column to start/end on
+				A name to start/end on
+				span <number>
+					The item will span across the number of grid tracks specified
+				span <name>
+					The item will span across until it hits the next line with the specified name 
+			If no -end declared, item spans one track by default
+			Items can overlap each other, use z-index to control stacking
+		grid-(column/row): <start-line> / <end-line>
+			Shorthand for above
+
+		grid-area: <name> | <row-start> / <column-start> / <row-end> / <column-end>;
+			Two important possible uses for this property
+			Can give an item a name so it may be referenced by grid-template-areas grid container property
+			Also can an even shorter shorthand! IMMA USE IT
+
+		justify-self: start | end | center | stretch
+			Aligns the CONTENT INSIDE a SINGLE grid item along the row axis
+			start;
+				Aligns content to the left end of grid item area
+			end;
+				Aligns content to the right end of the grid item area
+			center;
+			stretch;
+				Fills whole width of grid item area, default
+
+		align-self: start | end | center | stretch
+			Same as justify-self but for the column (content at top or bottom of grid item area) axis
+
+
+JS Notes
+	Variables
+		var name = value;
+			values can be numbers, strings, booleans
+			Steps of making a variable
+				Declaring the variable with its name
+				Assigning a value with the assignment operator or other operator
+	null
+		No value
+	undefined
+		No object
+	
+	Writing JS
+		Can put JS in your html file using <script> tags
+	typeof variablename
+		Returns the type of your variablename
+		Only for built in objects
+		All user made objects return object
+	variablename instanceof objectname
+		For user made objects
+		Returns logical
+	
+	console.log(value)
+		Prints value
+		For debugging/programming, not users
+		Take out when deploying site usually
+	alert(message)
+		Pop up box - Don't use pop up box functions whenever possible	
+		Annoying as fuck
+	prompt(message, default)
+		Asks user for input, can set to a var to use reurned string
+		default is the default content of text box before user changes it
+		Pop up box
+	confirm(message)
+		Returns a boolean value in response to a query to the user
+		Pop up box
+
+	document.write()
+		Simply writes content to html page body
+
+	Conditionals
+		Truthy & Falsy
+			All values regarded truthy except for:
+				0, NaN, false, null, undefined, '', ""
+		if conditional 
+			if () {
+			}
+			elseif () {
+			}
+			else {
+			}
+
+	= Signs
+		= Is an assignment operator
+		== Does a value check but not a type check
+		=== Is a more predictable comparison tool
+			If the value and type don't match, will return false
+
+	Arrays
+		var arrayName = ["Value1", "Value2", "Value3"];
+			Values don't have to be homogenous, but it is a good practice to do so
+				var arrayLength = arrayName.length
+					>arrayLength = 3
+				console.log(arrayName[0]); // Yields "Value1"
+				var index = arrayName.push('Value4'); // Adds "Value4" to arrayName and returns its' index
+					>index = 3
+				var index = indexOf('Value2'); // Returns index of "Value"
+					>index = 1
+
