@@ -1,0 +1,53 @@
+CSS Notes
+
+jQuery Notes
+    jQuery is a library used widely to simply JS operations/functions that would otherwise require a lot of time and expertise
+    To free up time for other more important work
+    To include jQuery
+        Use a downloaded jquery.js file
+        Use a CDN from Google or Microsoft
+            Preferred method, faster loading time
+            Google: <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    Syntax
+        $(selector).action()
+            $ sign used to access jQuery
+            A selector to query(find) HTML element(s)
+            A jQuery action to perform on the element(s)
+            EXAMPLES:
+                $(this).hide()
+                    Hides the current element
+                $("p").hide()
+                    Hides all <p> elements
+                $(".test").hide()
+                    Hides all elements with class "test"
+                $("#test").hide()
+
+    Document Ready Event
+        Put any jQuery code inside a document ready event
+        Doing this prevents any jQuery code from running before the document has finished loading
+        Two ways:
+            $(function() {
+                // jQuery methods go here!
+            });
+                    or
+            $(document).ready(function(){
+                // jQuery goes here!
+            });
+
+JS Notes
+    To make a multi-dimensional array simply
+        Make normal array
+            var list = [1, 2, 3];
+        Then make an array out of desired single dimensional arrays
+            var multiList = [list, list, list];
+            = [1, 2, 3]
+            [1, 2, 3]
+            [1, 2, 3]
+
+    continue vs break (in loops)
+        continue will continue on to the next part of the loop/condition
+        break ends the loop process and gets you out
+    
+DOM
+    All DOM elements are unique!

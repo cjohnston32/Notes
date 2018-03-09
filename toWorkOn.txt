@@ -1,0 +1,38 @@
+What to learn in order of priority:
+Check out cheat sheets for jQuery, Git, Bash
+
+jQuery
+    - Syntax
+    - Capture button clicks
+DOM
+    - Events
+General JS
+    - Objects in more depth
+    - Methods
+    - Quick review of scope
+    - JS file organization in regards to
+        + Global variables
+        + Functions & function calls
+            * IIFE
+    - Generate random numbers with math Object
+    - Capture key clicks - events
+        + Not just in the browser
+    - this Object
+    - Time Events
+    - ADVANCED
+        + Constructors
+        + Events
+Git branch
+CSS Grid and Flex
+    - Visual design for portfolio
+Bash
+
+Group Review Project 3-6-18
+Can you create/fully understand...
+    1)Hangman
+    2)Captain Planet
+    3)Lottery Generator
+
+Altered Carbon
+Jordan Peterson - The Biblical Studies
+    - Derrida

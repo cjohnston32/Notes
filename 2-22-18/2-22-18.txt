@@ -1,0 +1,33 @@
+Typing practice on pre-work
+
+JS Notes
+	Arrays are objects!
+	Learn to speak Javascript - make statements with code.
+	
+	parseInt(string, radix);
+		Parses a string into numbers
+		Stops at the first non-numeral character, even if there are numbers after it
+		Radix is log to use
+			Use 10 by default, but always specify a number
+
+	for loops
+		for(iterator,condition,addition(iteration))
+
+	DOM - Document Object Model
+		Javascript's representation of HTML
+		Connects webpage to scripts
+		Use document.propertyName()
+			var varName = document.getElementById(IDNAME);
+				Refernces the element with id IDNAME and assigns that reference to varName
+			document.onkeyup = function(event) {
+ 			  userText.textContent = event.key;
+			};
+
+		CHECK OUT:
+			.innerhtml
+				var varName = document.getElementById(IDNAME)
+			${} backtick
+			string template literal
+
+
+

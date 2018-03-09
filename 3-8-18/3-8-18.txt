@@ -1,0 +1,29 @@
+jQuery Notes
+    $("ID/.Class/#Element").html("<desired element>Content<closing tag if needed>")
+        .html method
+            Replaces html of selector, can change to a different element if need be
+        .text method
+            Replaces text of selector
+
+Coding Practices
+    Each line should do one thing
+
+JavaScript Notes
+    Timing Events
+    var myVar = setTimeout(function, miliseconds)
+        Executes the function after waiting the time in milliseconds;
+        EXAMPLE w jQuery
+            $("#cancelbutton").on("click", function() {
+                setTimeout(function() {
+                    alert("Alert #2");
+                }, 3000);
+            });
+            Sets the cancel button to cause alert "Alert #2" message 3 seconds after clicking on it
+    clearTimeout(myVar)
+        Stops the execution of the function in setTimeout
+        myVar is the variable returned by setTimeou
+
+    var myVar = setInterval(function, miliseconds)
+        Executes the function every given time-setInterval
+    clearInterval(myVar)
+

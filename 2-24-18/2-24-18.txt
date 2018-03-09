@@ -1,0 +1,4 @@
+Objects
+	To add a new property
+	objectName.propertyName = value;
+		Can also change an existing property value in this way

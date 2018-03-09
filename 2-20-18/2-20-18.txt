@@ -118,9 +118,21 @@ CSS Grid
 		align-items:
 			Same as above but for the column axis
 		
-		justify-content:
-			
-	
+		justify-content: start | end | center | stretch | space-around | space-between | space-evenly
+			Sets the alignment of the grid within the grid container along the row axis
+			Useful when the total size of your grid is less than the size of its' container
+				Can happen when all grid items are using non-flexible units
+			start
+				Aligns the grid to the left end of the grid container
+			space-around
+				Places an even amount of space between each "column" of grid item with a half-unit of that space on each end
+			space-between
+				Places an even amount of space between each grid item, no space at ends
+			space-evenly
+				Places an even amount of space between each grid item and at the ends
+
+		align-content:
+			Same as above but for the column axis
 
 	Grid Items!
 		grid-(row/column)-(start/end): <number> | <name> | span <number> | span <name> | auto
