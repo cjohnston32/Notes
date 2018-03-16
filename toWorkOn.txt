@@ -14,24 +14,52 @@ General JS
         + Global variables
         + Functions & function calls
             * IIFE
-    - Generate random numbers with math Object
+    - math Object
     - Capture key clicks - events
         + Not just in the browser
     - this Object
+    - document Object
     - Time Events
+    - Synchronous vs Asynchronous code
     - ADVANCED
         + Constructors
         + Events
+        + Promises & Deferred
+        + Callbacks
+        + Regular expressions
 Git branch
 CSS Grid and Flex
     - Visual design for portfolio
 Bash
 
-Group Review Project 3-6-18
-Can you create/fully understand...
-    1)Hangman
-    2)Captain Planet
-    3)Lottery Generator
+Thinking Like a Programmer
+    Go slow
+    Ask why? at every step
+    Make sure all your previous code is ready before doing the next step
+    Always challenge assumptions of problem!
+    Topics/Keywords
+        Computational Thinking
+        Alogirthmic Thinking/Algorithms
+        Visual Thinking
+        Pseudocode
+
+Books/Resources
+    Introduction to Algorithms by Cormen, Leiserson, Rivest, Stein
+        AKA CLRS
+    The Art of Computer Programming
+        Use as a reference when reading CLRS
+    Computational Thinking
+        https://edu.google.com/resources/programs/exploring-computational-thinking/#!ct-materials
+    Different Technologies/Languages - Cheatsheet/Short Books
+        http://books.goalkicker.com/
+    Proofs
+        How to Read and Do Proofs
+        How to Prove It
+        Proofs From the Book
+        Basic Proof Theory
+    Visual Thinking or Design?
+
+
 
 Altered Carbon
 Jordan Peterson - The Biblical Studies

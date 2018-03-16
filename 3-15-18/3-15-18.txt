@@ -1,0 +1,81 @@
+JSON
+    JavaScript Object Notation
+    A format for JS objects
+    Used in APIs
+
+AJAX
+    Asyncrhonous Javascript and XML
+    jQuery
+        $.ajax() method performs an HTTP request (retrieve data from URL database)
+        Mother of all other jQuery ajax 'convenience methods'
+            Convenience methods are wrappers around core $.ajax() method
+                Often just specific option methods for options available on $.ajax()
+            Best to use $.ajax() instead of convenience methods for a few reasons
+                1) Readability
+                2) Extensive configurability
+                3) Error handling
+        Does not need a selector
+        One argument, an object
+        Only runs after receiving all the data from the server!
+        $.ajax({name1: value, name2: value, ...})
+            Common names/objects used
+
+        EXAMPLE:
+            <script>
+                $.ajax({
+                    url: 'URL TO DRAW DATA FROM'
+                    method: 'GET'
+                }).then(function(response) {
+                    console.log('done')
+                }).catch(function(err) {
+                    console.log('failed')
+                }
+       
+        .jqXHR object
+            jQuery's replacement (wrapper) for native JS XMLHttpRequest object
+            Often used with Promises
+            Available Promises
+                $.ajax({
+                    AJAX NAME:VALUE PAIRS GO HERE
+                    url: 'Example url'
+                    method: 'GET'
+                }).done(function() {
+                    // This code will run if the $.ajax succeds
+                });
+                $.ajax.fail(function() {
+                    // Runs if $.ajax fails
+                });
+                $.ajax.always(function() {
+                    // Always runs when $.ajax is finished
+                });
+                $.ajax.then(function() {
+                    
+                }
+
+        Promises vs Deferred
+            Deferred object
+                Exclusive to jQuery since jQuery is using an older promise implementation
+
+
+
+    Can also use normal JavaScript to perform an HTTP request, learn later!
+        - Is harder than with jQuery
+        - XMLHttpRequest vs Fetch API
+
+JavaScript Notes
+    Promises
+        A promise is an placeholder for a result which is initially unknown
+        A value returned by an asynchronous function
+        Promises are always in 1 of 3 states
+            1) Pending
+                Promise may tansition to either of other states
+            2) Fulfilled
+                Promise may not transition to other state
+                Promise must have a value, which must not change
+            3) Rejected
+                Promise may not transition to other state
+                Promise must have a reason, which must not change
+    Deferred
+        Represents the computation that results in the value that a promise is holding
+    Asynchronous co
+

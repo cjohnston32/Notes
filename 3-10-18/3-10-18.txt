@@ -1,0 +1,39 @@
+Tech Interview
+    Look up company's core values on their website
+    Questions will often not search for a precise answer, but often exist to examine your problem-solving methods
+        - Challenge assumptions of questions before responding
+
+Bash Questions
+    1) Creata file 
+        touch
+    2) Make a folder
+        mkdir
+    3) Delete a file
+        rm
+    4) Delete a folder
+        rmdir
+        rm -rf
+    5) 
+    6)
+    7) 
+    9) See what directory you are in
+    10) See command history
+        history
+
+Algorithms
+    Bubble Sort
+        Passes through a list and comparing neighbouring values
+        Swaps values if needed
+        Will pass through list multiple times
+        Stops passing when a pass has been completed with no swapping
+
+Thinking Like a Programmer
+    Go slow
+    Ask why? at every step
+    Make sure all your previous code is ready before doing the next step
+    Always challenge assumptions of problem!
+    Topics/Keywords
+        Computational Thinking
+        Alogirthmic Thinking/Algorithms
+        Visual Thinking
+        Pseudocode
