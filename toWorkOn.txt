@@ -1,6 +1,10 @@
 What to learn in order of priority:
 Check out cheat sheets for jQuery, Git, Bash
 
+HTML
+    - data-* attribute
+    - microformats
+
 jQuery
     - Syntax
     - Capture button clicks

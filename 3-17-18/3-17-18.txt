@@ -1,0 +1,53 @@
+HTML
+    Data Attributes
+        Any attribute with the form: data-*
+            The * may be any name that follows XML form and also the three following conditions
+                1)Cannot start with XML
+                2)Must not contain any semicolon
+                3)No capital A-Z letters
+        These are for custom/arbitrary data that does not fit any other element
+        Private to the page, usually ignored by search engines
+            Unlike microformats
+        Three ways of parsing
+            HTML EXAMPLE:
+                <article
+                    id="electriccars"
+                    data-columns="3"
+                    data-index-number="12314"
+                    data-parent="cars">
+                </article>
+            1)JavaScript
+                getAttribute() & setAttribute()
+                    A little more lengthy than ii)
+                    EXAMPLE:
+                        var article = document.getElementById('electriccars');
+                        var show = article.getAttribute('data-columns');
+                        article.setAttribute('data-columns', +show+3);
+            2)HTML dataset API
+                More simple than 1)
+                EXAMPLE:
+                    var article = document.getElementById('electriccars');
+                    article.dataset.columns // '3'
+                    article.dataset.indexNumber // '12314', Note that additional dashes are converted to case
+                    article.dataset.parent = trucks // Changes 'cars' to 'trucks'
+                Note each property is always a string
+                When using dataset API, names are interpreted differently
+                    Attribute name: data-index-number
+                    Dataset API name: indexNumber
+            3)jQuery
+                data() method
+                EXAMPLE:
+                    var article = $('#electriccars');
+                    var show = article.data('index-number');
+                    article.data('index-number', show+3); // To change value in data-index-number
+                This only changes the data-index-number value inside jQuery (doesn't touch DOM) 
+        Can also access these properties with CSS
+            EXAMPLE:
+                article[data-columns='3'] {
+                    // CSS Stuff here
+                }
+
+
+                
+
+Checkout today's activities so you know whats happening with APIS
